@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Algorithms</string>
+    <string name="action_settings">Settings</string>
+    <string name="Welcome">Welcome to Algorithms!</string>
+    <string name="Selection">Click on the algorithm of your choice:</string>
+    <string name="Bubble">Bubble Sort</string>
+    <string name="Input">Input numbers to sort(seprated by commas &quot;,&quot;)</string>
+    <string name="egInput">Ex: 1,2,3,4,5,6</string>
+    <string name="title_activity_bubble_sort">BubbleSort</string>
+    <string name="hello_world">Hello world!</string>
+
+</resources>
