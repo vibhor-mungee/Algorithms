@@ -10,21 +10,21 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.widget.TextView;
 
-public class BubbleSort extends Activity {
+public class InsertionSort extends Activity {
 
-	public StringBuffer sb;
-
+	StringBuffer sb;
+	Intent in;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		sb = new StringBuffer();
-		Intent in = getIntent();
+		in = getIntent();
 		Bundle b = in.getExtras();
 		
-		if (b != null) {
+		if(b!=null){
 			TextView tv1 = new TextView(this);
-			ArrayList<String> arr = (ArrayList<String>) b
-					.getStringArrayList("Bubble");
+			ArrayList<String> arr = b.getStringArrayList("Insert");
 			int[] inputInt = new int[arr.size()];
 			int n = 0;
 			Iterator it = arr.iterator();
@@ -33,49 +33,41 @@ public class BubbleSort extends Activity {
 				n++;
 			}
 			sb.append("Input Data" + Arrays.toString(inputInt));
-			int[] output = BubSort(inputInt);
+			int[] output = InsSort(inputInt);
 			sb.append("\nOutput Sorted Data: " + Arrays.toString(output));
 			tv1.setText(sb);
 			
 			setContentView(tv1);
+			
 		}
-
 	}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.bubble_sort, menu);
+		getMenuInflater().inflate(R.menu.insertion_sort, menu);
 		return true;
 	}
 	
-	public int[] BubSort(int[] inp){
-
-		
-		int[] input = inp;
-		int i = 0;
-		int flag = 1;
+	public int[] InsSort(int[] inp){
 		sb.append("\nSorting Start");
+		int n = inp.length;
 		int pass = 0;
-		while(flag==1){
+		for (int j = 1; j < n; j++) {
+			int key = inp[j];
+			int i = j - 1;
+			while ((i > -1) && (inp[i] > key)) {
+				inp[i + 1] = inp[i];
+				i--;
+			}
+			inp[i + 1] = key;
 			sb.append("\nPass: " + pass + ".");
-			sb.append("\n" + Arrays.toString(input));
+			sb.append("\n" + Arrays.toString(inp));
 			pass++;
-			flag = 0;
-			i=0;
-			while (i<(input.length-1)){
-				int temp = 0;
-				if(input[i]>input[i+1]){
-					temp = input[i];
-					input[i] = input[i+1];
-					input[i+1] = temp;
-					flag = 1;
-				}
-				i++;
-			}	
 		}
-		sb.append("\nSorting End.");
-		return input;
+		
+		sb.append("\nSorting Start");
+		return inp;
 	}
 
 }

@@ -14,7 +14,8 @@ import android.widget.EditText;
 public class MainActivity extends Activity {
 
 	public static String INPUT = "com.example.algorithms.INPUT";
-	public static ArrayList<String> passData = new ArrayList<String>();
+	public static ArrayList<String> passData;
+	public Intent intent;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -30,9 +31,20 @@ public class MainActivity extends Activity {
 	}
 
 	public void bubbleSort(View view) {
-		Intent intent = new Intent(this, BubbleSort.class);
+		intent = new Intent(this, BubbleSort.class);
+		sort("Bubble", intent);
+	}
+	
+	public void insertionSort(View view){
+		intent = new Intent(this, InsertionSort.class);
+		sort("Insert",intent);
+	}
+	
+	
+	private void sort(String sort, Intent in){
 		EditText et = (EditText) findViewById(R.id.editText1);
 		String input = et.getText().toString();
+		passData = new ArrayList<String>();
 		if (input.length() == 0) {
 			et.requestFocus();
 			et.setError("Length cannot be left blank");
@@ -45,13 +57,14 @@ public class MainActivity extends Activity {
 					passData.add(m.group(1));
 				}
 
-				intent.putExtra("Input", passData);
-				startActivity(intent);
+				in.putExtra(sort, passData);
+				startActivity(in);
 			} else {
 				et.requestFocus();
 				et.setError("Invalid string format");
 			}
 		}
+	
 	}
 
 }

@@ -10,5 +10,7 @@
     <string name="egInput">Ex: 1,2,3,4,5,6</string>
     <string name="title_activity_bubble_sort">BubbleSort</string>
     <string name="hello_world">Hello world!</string>
+    <string name="title_activity_insertion_sort">InsertionSort</string>
+    <string name="Insertion">Insertion Sort</string>
 
 </resources>

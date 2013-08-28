@@ -26,6 +26,10 @@
             android:name="com.example.algorithms.BubbleSort"
             android:label="@string/title_activity_bubble_sort" >
         </activity>
+        <activity
+            android:name="com.example.algorithms.InsertionSort"
+            android:label="@string/title_activity_insertion_sort" >
+        </activity>
     </application>
 
 </manifest>
