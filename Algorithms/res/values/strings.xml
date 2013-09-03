@@ -12,5 +12,9 @@
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_insertion_sort">InsertionSort</string>
     <string name="Insertion">Insertion Sort</string>
+    <string name="title_activity_selection_sort">SelectionSort</string>
+    <string name="SelectionS">Selection Sort</string>
+    <string name="title_activity_cocktail_sort">CocktailSort</string>
+    <string name="Cocktail">Cocktail Sort</string>
 
 </resources>

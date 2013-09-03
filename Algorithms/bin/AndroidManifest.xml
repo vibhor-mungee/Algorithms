@@ -30,6 +30,14 @@
             android:name="com.example.algorithms.InsertionSort"
             android:label="@string/title_activity_insertion_sort" >
         </activity>
+        <activity
+            android:name="com.example.algorithms.SelectionSort"
+            android:label="@string/title_activity_selection_sort" >
+        </activity>
+        <activity
+            android:name="com.example.algorithms.CocktailSort"
+            android:label="@string/title_activity_cocktail_sort" >
+        </activity>
     </application>
 
 </manifest>

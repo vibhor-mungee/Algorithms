@@ -40,6 +40,16 @@ public class MainActivity extends Activity {
 		sort("Insert",intent);
 	}
 	
+	public void selectionSort(View view){
+		intent = new Intent(this, SelectionSort.class);
+		sort("Selection",intent);
+	}
+	
+	public void cocktailSort(View view){
+		intent = new Intent(this,CocktailSort.class);
+		sort("Cocktail",intent);
+	}
+	
 	
 	private void sort(String sort, Intent in){
 		EditText et = (EditText) findViewById(R.id.editText1);
@@ -49,7 +59,7 @@ public class MainActivity extends Activity {
 			et.requestFocus();
 			et.setError("Length cannot be left blank");
 		} else {
-			if (input.matches("^[0-9,]+$")) {
+			if (input.matches("^[1-9][0-9]*(,[1-9][0-9]*)*$")) {
 				Pattern p = Pattern.compile("(\\d+)(,?)");
 				Matcher m = p.matcher(input);
 
