@@ -37,6 +37,7 @@ public class CocktailSort extends Activity {
 			tv1.setText(sb);
 
 			setContentView(tv1);
+			getActionBar().setDisplayHomeAsUpEnabled(true);
 		}
 
 	}
@@ -74,7 +75,7 @@ public class CocktailSort extends Activity {
 			}
 			while (j > 0) {
 				int temp2 = 0;
-				if (input[j] > input[j - 1]) {
+				if (input[j] < input[j - 1]) {
 					temp2 = input[j - 1];
 					input[j - 1] = input[j];
 					input[j] = temp2;

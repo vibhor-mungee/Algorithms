@@ -5,8 +5,8 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="8"
-        android:targetSdkVersion="16" />
+        android:minSdkVersion="11"
+        android:targetSdkVersion="17" />
 
     <application
         android:allowBackup="true"
@@ -24,19 +24,35 @@
         </activity>
         <activity
             android:name="com.example.algorithms.BubbleSort"
-            android:label="@string/title_activity_bubble_sort" >
+            android:label="@string/title_activity_bubble_sort"
+            android:parentActivityName="com.example.algorithms.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.algorithms.MainActivity" />
         </activity>
         <activity
             android:name="com.example.algorithms.InsertionSort"
-            android:label="@string/title_activity_insertion_sort" >
+            android:label="@string/title_activity_insertion_sort"
+            android:parentActivityName="com.example.algorithms.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.algorithms.MainActivity" />
         </activity>
         <activity
             android:name="com.example.algorithms.SelectionSort"
-            android:label="@string/title_activity_selection_sort" >
+            android:label="@string/title_activity_selection_sort"
+            android:parentActivityName="com.example.algorithms.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.algorithms.MainActivity" />
         </activity>
         <activity
             android:name="com.example.algorithms.CocktailSort"
-            android:label="@string/title_activity_cocktail_sort" >
+            android:label="@string/title_activity_cocktail_sort"
+            android:parentActivityName="com.example.algorithms.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.algorithms.MainActivity" />
         </activity>
     </application>
 

@@ -25,8 +25,7 @@ public class SelectionSort extends Activity {
 			TextView tv1 = new TextView(this);
 			ArrayList<String> arr = b.getStringArrayList("Selection");
 			ArrayList<Integer> inputInt = new ArrayList<Integer>();
-			int n = 0;
-			Iterator it = arr.iterator();
+			Iterator<String> it = arr.iterator();
 			while (it.hasNext()) {
 				inputInt.add(Integer.parseInt((String) it.next()));
 			}
@@ -36,6 +35,7 @@ public class SelectionSort extends Activity {
 			tv1.setText(sb);
 
 			setContentView(tv1);
+			getActionBar().setDisplayHomeAsUpEnabled(true);
 		}
 	}
 

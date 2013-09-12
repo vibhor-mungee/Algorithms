@@ -38,6 +38,7 @@ public class BubbleSort extends Activity {
 			tv1.setText(sb);
 			
 			setContentView(tv1);
+			getActionBar().setDisplayHomeAsUpEnabled(true);
 		}
 
 	}
